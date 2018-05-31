@@ -47,7 +47,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 using System.Xml.Linq;
 using DocumentFormat.OpenXml.Packaging;
 
@@ -2369,7 +2369,7 @@ namespace OpenXmlPowerTools
                     sb.Append(runText);
                 runText = sb.ToString();
             }
-
+#if NET45
             try
             {
                 using (Font f = new Font(ff, (float) sz/2f, fs))
@@ -2438,6 +2438,10 @@ namespace OpenXmlPowerTools
                 // This happened on Azure but interestingly enough not while testing locally.
                 return 0;
             }
+            #else
+            return 0;
+#endif
+
         }
 
         private static void InsertAppropriateNonbreakingSpaces(WordprocessingDocument wordDoc)

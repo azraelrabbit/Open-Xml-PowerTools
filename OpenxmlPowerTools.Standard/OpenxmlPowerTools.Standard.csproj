@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>OpenXmlPowerTools</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\OpenXmlPowerTools\ChartUpdater.cs" Link="ChartUpdater.cs" />
+    <Compile Include="..\OpenXmlPowerTools\DocumentAssembler.cs" Link="DocumentAssembler.cs" />
+    <Compile Include="..\OpenXmlPowerTools\DocumentBuilder.cs" Link="DocumentBuilder.cs" />
+    <Compile Include="..\OpenXmlPowerTools\ExcelFormula.cs" Link="ExcelFormula.cs" />
+    <Compile Include="..\OpenXmlPowerTools\FieldRetriever.cs" Link="FieldRetriever.cs" />
+    <Compile Include="..\OpenXmlPowerTools\FormattingAssembler.cs" Link="FormattingAssembler.cs" />
+    <Compile Include="..\OpenXmlPowerTools\GetListItemText_Default.cs" Link="GetListItemText_Default.cs" />
+    <Compile Include="..\OpenXmlPowerTools\GetListItemText_fr_FR.cs" Link="GetListItemText_fr_FR.cs" />
+    <Compile Include="..\OpenXmlPowerTools\GetListItemText_ru_RU.cs" Link="GetListItemText_ru_RU.cs" />
+    <Compile Include="..\OpenXmlPowerTools\GetListItemText_sv_SE.cs" Link="GetListItemText_sv_SE.cs" />
+    <Compile Include="..\OpenXmlPowerTools\GetListItemText_tr_TR.cs" Link="GetListItemText_tr_TR.cs" />
+    <Compile Include="..\OpenXmlPowerTools\GetListItemText_zh_CN.cs" Link="GetListItemText_zh_CN.cs" />
+    <Compile Include="..\OpenXmlPowerTools\HtmlToWmlConverter.cs" Link="HtmlToWmlConverter.cs" />
+    <Compile Include="..\OpenXmlPowerTools\HtmlToWmlConverterCore.cs" Link="HtmlToWmlConverterCore.cs" />
+    <Compile Include="..\OpenXmlPowerTools\HtmlToWmlCssApplier.cs" Link="HtmlToWmlCssApplier.cs" />
+    <Compile Include="..\OpenXmlPowerTools\HtmlToWmlCssParser.cs" Link="HtmlToWmlCssParser.cs" />
+    <Compile Include="..\OpenXmlPowerTools\ListItemRetriever.cs" Link="ListItemRetriever.cs" />
+    <Compile Include="..\OpenXmlPowerTools\MarkupSimplifier.cs" Link="MarkupSimplifier.cs" />
+    <Compile Include="..\OpenXmlPowerTools\MetricsGetter.cs" Link="MetricsGetter.cs" />
+    <Compile Include="..\OpenXmlPowerTools\OpenXmlRegex.cs" Link="OpenXmlRegex.cs" />
+    <Compile Include="..\OpenXmlPowerTools\OxPtHelpers.cs" Link="OxPtHelpers.cs" />
+    <Compile Include="..\OpenXmlPowerTools\PegBase.cs" Link="PegBase.cs" />
+    <Compile Include="..\OpenXmlPowerTools\PowerToolsBlock.cs" Link="PowerToolsBlock.cs" />
+    <Compile Include="..\OpenXmlPowerTools\PowerToolsBlockExtensions.cs" Link="PowerToolsBlockExtensions.cs" />
+    <Compile Include="..\OpenXmlPowerTools\PresentationBuilder.cs" Link="PresentationBuilder.cs" />
+    <Compile Include="..\OpenXmlPowerTools\PtOpenXmlDocument.cs" Link="PtOpenXmlDocument.cs" />
+    <Compile Include="..\OpenXmlPowerTools\PtOpenXmlUtil.cs" Link="PtOpenXmlUtil.cs" />
+    <Compile Include="..\OpenXmlPowerTools\PtUtil.cs" Link="PtUtil.cs" />
+    <Compile Include="..\OpenXmlPowerTools\ReferenceAdder.cs" Link="ReferenceAdder.cs" />
+    <Compile Include="..\OpenXmlPowerTools\RevisionAccepter.cs" Link="RevisionAccepter.cs" />
+    <Compile Include="..\OpenXmlPowerTools\RevisionProcessor.cs" Link="RevisionProcessor.cs" />
+    <Compile Include="..\OpenXmlPowerTools\ScalarTypes.cs" Link="ScalarTypes.cs" />
+    <Compile Include="..\OpenXmlPowerTools\SmlCellFormatter.cs" Link="SmlCellFormatter.cs" />
+    <Compile Include="..\OpenXmlPowerTools\SmlDataRetriever.cs" Link="SmlDataRetriever.cs" />
+    <Compile Include="..\OpenXmlPowerTools\SmlToHtmlConverter.cs" Link="SmlToHtmlConverter.cs" />
+    <Compile Include="..\OpenXmlPowerTools\SpreadsheetDocumentManager.cs" Link="SpreadsheetDocumentManager.cs" />
+    <Compile Include="..\OpenXmlPowerTools\SpreadsheetWriter.cs" Link="SpreadsheetWriter.cs" />
+    <Compile Include="..\OpenXmlPowerTools\SSFormula.cs" Link="SSFormula.cs" />
+    <Compile Include="..\OpenXmlPowerTools\StronglyTypedBlock.cs" Link="StronglyTypedBlock.cs" />
+    <Compile Include="..\OpenXmlPowerTools\TestUtil.cs" Link="TestUtil.cs" />
+    <Compile Include="..\OpenXmlPowerTools\TextReplacer.cs" Link="TextReplacer.cs" />
+    <Compile Include="..\OpenXmlPowerTools\UnicodeMapper.cs" Link="UnicodeMapper.cs" />
+    <Compile Include="..\OpenXmlPowerTools\WmlComparer.cs" Link="WmlComparer.cs" />
+    <Compile Include="..\OpenXmlPowerTools\WmlDocument.cs" Link="WmlDocument.cs" />
+    <Compile Include="..\OpenXmlPowerTools\WmlToHtmlConverter.cs" Link="WmlToHtmlConverter.cs" />
+    <Compile Include="..\OpenXmlPowerTools\WmlToXml.cs" Link="WmlToXml.cs" />
+    <Compile Include="..\OpenXmlPowerTools\WorksheetAccessor.cs" Link="WorksheetAccessor.cs" />
+    <Compile Include="..\OpenXmlPowerTools\XlsxTables.cs" Link="XlsxTables.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.8.1" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
+    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

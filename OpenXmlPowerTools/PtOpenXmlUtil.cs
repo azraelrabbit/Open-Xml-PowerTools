@@ -40,6 +40,13 @@ using System.Drawing;
 using Font = System.Drawing.Font;
 using FontFamily = System.Drawing.FontFamily;
 
+#if NET45
+using System.Windows.Forms;
+#else
+
+ 
+#endif
+
 // ReSharper disable InconsistentNaming
 
 namespace OpenXmlPowerTools
@@ -48,6 +55,7 @@ namespace OpenXmlPowerTools
     {
         public static XDocument GetXDocument(this OpenXmlPart part)
         {
+           
             if (part == null) throw new ArgumentNullException("part");
 
             XDocument partXDocument = part.Annotation<XDocument>();
@@ -743,13 +751,15 @@ namespace OpenXmlPowerTools
                 runText = sb.ToString();
             }
 
+            #if NET45 
             try
             {
                 using (Font f = new Font(ff, (float)sz / 2f, fs))
                 {
-                    System.Windows.Forms.TextFormatFlags tff = System.Windows.Forms.TextFormatFlags.NoPadding;
+                    
+                    TextFormatFlags tff = TextFormatFlags.NoPadding;
                     Size proposedSize = new Size(int.MaxValue, int.MaxValue);
-                    var sf = System.Windows.Forms.TextRenderer.MeasureText(runText, f, proposedSize, tff); // sf returns size in pixels
+                    var sf = TextRenderer.MeasureText(runText, f, proposedSize, tff); // sf returns size in pixels
                     var dpi = 96m;
                     var twip = (int)(((sf.Width / dpi) * 1440m) / multiplier + tabLength * 1440m);
                     return twip;
@@ -803,6 +813,9 @@ namespace OpenXmlPowerTools
                     }
                 }
             }
+    #else
+            return 0;
+#endif
         }
 
         public static bool GetBoolProp(XElement runProps, XName xName)

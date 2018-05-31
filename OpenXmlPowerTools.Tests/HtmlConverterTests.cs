@@ -127,6 +127,9 @@ namespace OxPt
             ConvertToHtmlUsingWord(sourceDocx, wordConvertedDocHtml);
 #endif
 
+
+            KnownColor
+
         }
 
         [Theory]

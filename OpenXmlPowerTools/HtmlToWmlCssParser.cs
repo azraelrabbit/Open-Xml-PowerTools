@@ -808,12 +808,16 @@ namespace OpenXmlPowerTools.HtmlToWml.CSS
                     }
                     if (number) { return false; }
 
+                    #if NET45
                     try
                     {
                         KnownColor kc = (KnownColor)Enum.Parse(typeof(KnownColor), m_value, true);
                         return true;
                     }
                     catch { }
+    #else
+                    
+                    #endif
                 }
                 return false;
             }
@@ -835,6 +839,7 @@ namespace OpenXmlPowerTools.HtmlToWml.CSS
             }
             else
             {
+#if NET45
                 try
                 {
                     KnownColor kc = (KnownColor)Enum.Parse(typeof(KnownColor), m_value, true);
@@ -842,6 +847,7 @@ namespace OpenXmlPowerTools.HtmlToWml.CSS
                     return c;
                 }
                 catch { }
+    #endif
             }
             int r = ConvertFromHex(hex.Substring(0, 2));
             int g = ConvertFromHex(hex.Substring(2, 2));
@@ -1523,11 +1529,13 @@ namespace OpenXmlPowerTools.HtmlToWml.CSS
                         return false;
                     }
 
+                    #if NET45
                     KnownColor kc;
                     if (Enum.TryParse(m_val, true, out kc))
                     {
                         return true;
                     }
+    #endif
                 }
                 else if (m_type == CssTermType.Function)
                 {
@@ -1649,6 +1657,7 @@ namespace OpenXmlPowerTools.HtmlToWml.CSS
             }
             else
             {
+               #if NET45
                 try
                 {
                     KnownColor kc = (KnownColor)Enum.Parse(typeof(KnownColor), m_val, true);
@@ -1656,6 +1665,7 @@ namespace OpenXmlPowerTools.HtmlToWml.CSS
                     return c;
                 }
                 catch { }
+    #endif
             }
             if (hex.Length == 3)
             {
